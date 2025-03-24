@@ -279,4 +279,47 @@ function initTabs() {
     // Initialize tabs
     initTabs();
   });
+
+  // Add this to the existing JavaScript file
+
+// Accordion functionality for About page
+function initAccordion() {
+    const accordionItems = document.querySelectorAll('.ethos-item');
+    
+    if (accordionItems.length === 0) return;
+    
+    accordionItems.forEach(item => {
+      const header = item.querySelector('.ethos-header');
+      
+      header.addEventListener('click', function() {
+        const isActive = item.classList.contains('active');
+        
+        // Close all items
+        accordionItems.forEach(accItem => {
+          accItem.classList.remove('active');
+        });
+        
+        // If the clicked item wasn't active, open it
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+    
+    // Open the first item by default
+    if (accordionItems.length > 0) {
+      accordionItems[0].classList.add('active');
+    }
+  }
+  
+  // Call the function when DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    // Existing code...
+    
+    // Initialize tabs
+    initTabs();
+    
+    // Initialize accordion
+    initAccordion();
+  });
   
