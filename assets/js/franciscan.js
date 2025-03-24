@@ -246,3 +246,37 @@ function initTestimonialSlider() {
     updateTestimonial();
   }, 7000);
 }
+
+// Add this to the existing JavaScript file
+
+// Tab functionality for Welcome page
+function initTabs() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    if (tabBtns.length === 0) return;
+    
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        // Remove active class from all buttons and contents
+        tabBtns.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        // Show corresponding content
+        const tabId = this.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+  }
+  
+  // Call the function when DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    // Existing code...
+    
+    // Initialize tabs
+    initTabs();
+  });
+  
