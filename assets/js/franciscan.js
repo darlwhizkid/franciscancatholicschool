@@ -386,3 +386,43 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize testimonials slider
   initTestimonialsSlider();
 });
+
+// Add this to the existing JavaScript file
+
+// FAQ functionality
+function initFAQs() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  if (faqItems.length === 0) return;
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const toggle = item.querySelector('.faq-toggle');
+    const answer = item.querySelector('.faq-answer');
+    
+    question.addEventListener('click', function() {
+      // Close all other FAQs
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.querySelector('.faq-answer').classList.remove('active');
+          otherItem.querySelector('.faq-toggle').classList.remove('active');
+        }
+      });
+      
+      // Toggle current FAQ
+      answer.classList.toggle('active');
+      toggle.classList.toggle('active');
+    });
+  });
+}
+
+// Call the function when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Existing code...
+  
+  // Initialize testimonials slider
+  initTestimonialsSlider();
+  
+  // Initialize FAQs
+  initFAQs();
+});
