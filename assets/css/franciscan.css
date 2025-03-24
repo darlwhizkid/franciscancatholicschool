@@ -2451,6 +2451,468 @@ img {
       font-size: 1.2rem;
     }
   }
+
+  /* Additional CSS for Programme Page */
+
+/* Programme Introduction Section Styles */
+.programme-intro-section {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+.programme-intro-container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.programme-intro-content {
+  flex: 1;
+}
+
+.programme-intro-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  margin-top: 1rem;
+}
+
+.download-btn i {
+  margin-right: 0.8rem;
+}
+
+.download-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.programme-intro-image {
+  flex: 0 0 45%;
+}
+
+.shape-container {
+  position: relative;
+  padding-bottom: 120%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.shape-container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: 10px;
+  transform: translate(20px, 20px);
+  z-index: 1;
+}
+
+.shape-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  z-index: 2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Early Years and Primary Section Styles */
+.early-years-section {
+  padding: 5rem 0;
+  background-color: var(--light-bg);
+}
+
+.primary-section {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+.early-years-container, .primary-container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.early-years-content, .primary-content {
+  flex: 1;
+}
+
+.early-years-levels, .primary-levels {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.age-range {
+  color: var(--secondary);
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.early-years-text p, .primary-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.programme-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.programme-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.programme-feature i {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+}
+
+.programme-feature span {
+  font-weight: 500;
+}
+
+.programme-level {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.programme-level:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.primary-level {
+  border-top: 5px solid var(--primary);
+}
+
+.secondary-level {
+  border-top: 5px solid var(--secondary);
+}
+
+.level-icon {
+  width: 70px;
+  height: 70px;
+  background-color: var(--light-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+}
+
+.level-icon i {
+  font-size: 1.8rem;
+  color: var(--primary);
+}
+
+.programme-level h4 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.programme-level p {
+  margin-bottom: 0.8rem;
+}
+
+.level-age {
+  display: inline-block;
+  background-color: var(--light-bg);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+.level-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.level-link i {
+  margin-left: 0.5rem;
+  transition: var(--transition);
+}
+
+.level-link:hover {
+  color: var(--secondary);
+}
+
+.level-link:hover i {
+  transform: translateX(5px);
+}
+
+/* Curriculum Blend Section Styles */
+.curriculum-blend-section {
+  padding: 5rem 0;
+  background-color: var(--light-bg);
+}
+
+.curriculum-blend-container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.curriculum-blend-text {
+  flex: 1;
+}
+
+.curriculum-blend-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.curriculum-blend-image {
+  flex: 0 0 40%;
+}
+
+.curriculum-blend-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.curriculum-approaches {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.curriculum-approach {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.curriculum-approach:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.approach-icon {
+  width: 70px;
+  height: 70px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+}
+
+.approach-icon i {
+  font-size: 1.8rem;
+}
+
+.curriculum-approach h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.curriculum-approach p {
+  line-height: 1.7;
+}
+
+/* Extra-Curricular Section Styles */
+.extra-curricular-section {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+.extra-curricular-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.extra-curricular-item {
+  display: flex;
+  background-color: var(--light-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.extra-curricular-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.extra-image {
+  flex: 0 0 40%;
+}
+
+.extra-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.extra-content {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.extra-content h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.extra-content p {
+  line-height: 1.7;
+}
+
+/* Responsive Styles for Programme Page */
+@media screen and (max-width: 1200px) {
+  .programme-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
   
+  .curriculum-approaches {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .extra-curricular-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .programme-intro-container {
+    flex-direction: column-reverse;
+  }
+  
+  .programme-intro-image {
+    flex: 0 0 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .early-years-container, .primary-container {
+    flex-direction: column;
+  }
+  
+  .early-years-levels, .primary-levels {
+    flex: 0 0 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .programme-level {
+    flex: 0 0 calc(50% - 1rem);
+  }
+  
+  .curriculum-blend-container {
+    flex-direction: column;
+  }
+  
+  .curriculum-blend-image {
+    flex: 0 0 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .early-years-levels, .primary-levels {
+    flex-direction: column;
+  }
+  
+  .programme-level {
+    flex: 0 0 100%;
+  }
+  
+  .programme-features {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .curriculum-approaches {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .extra-curricular-item {
+    flex-direction: column;
+  }
+  
+  .extra-image {
+    flex: 0 0 200px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .shape-container {
+    padding-bottom: 100%;
+  }
+  
+  .shape-container:before {
+    transform: translate(10px, 10px);
+  }
+  
+  .level-icon, .approach-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .level-icon i, .approach-icon i {
+    font-size: 1.5rem;
+  }
+  
+  .programme-level, .curriculum-approach {
+    padding: 1.5rem;
+  }
+  
+  .programme-level h4, .curriculum-approach h3, .extra-content h3 {
+    font-size: 1.2rem;
+  }
+}
+
+
   
   

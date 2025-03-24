@@ -322,4 +322,67 @@ function initAccordion() {
     // Initialize accordion
     initAccordion();
   });
+
+// Add this to the existing JavaScript file
+
+// Testimonials slider functionality
+function initTestimonialsSlider() {
+  const testimonialCards = document.querySelectorAll('.testimonial-card');
+  const dots = document.querySelectorAll('.testimonial-dots .dot');
+  const prevBtn = document.querySelector('.testimonial-arrow.prev');
+  const nextBtn = document.querySelector('.testimonial-arrow.next');
   
+  if (testimonialCards.length === 0) return;
+  
+  let currentIndex = 0;
+  
+  function showTestimonial(index) {
+    // Hide all testimonials
+    testimonialCards.forEach(card => {
+      card.classList.remove('active');
+    });
+    
+    // Remove active class from all dots
+    dots.forEach(dot => {
+      dot.classList.remove('active');
+    });
+    
+    // Show the selected testimonial and activate corresponding dot
+    testimonialCards[index].classList.add('active');
+    dots[index].classList.add('active');
+  }
+  
+  // Next button click
+  nextBtn.addEventListener('click', function() {
+    currentIndex = (currentIndex + 1) % testimonialCards.length;
+    showTestimonial(currentIndex);
+  });
+  
+  // Previous button click
+  prevBtn.addEventListener('click', function() {
+    currentIndex = (currentIndex - 1 + testimonialCards.length) % testimonialCards.length;
+    showTestimonial(currentIndex);
+  });
+  
+  // Dot clicks
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', function() {
+      currentIndex = index;
+      showTestimonial(currentIndex);
+    });
+  });
+  
+  // Auto-advance testimonials every 5 seconds
+  setInterval(function() {
+    currentIndex = (currentIndex + 1) % testimonialCards.length;
+    showTestimonial(currentIndex);
+  }, 5000);
+}
+
+// Call the function when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Existing code...
+  
+  // Initialize testimonials slider
+  initTestimonialsSlider();
+});
