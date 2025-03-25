@@ -3705,6 +3705,674 @@ img {
     font-size: 1rem;
   }
 }
+/* Additional CSS for PreSchool Page */
+
+/* PreSchool Header Styles */
+.preschool-header {
+  background-image: url('../img/preschool-header.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 8rem 0;
+  text-align: center;
+  color: var(--white);
+}
+
+/* PreSchool Introduction Section Styles */
+.preschool-intro-section {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+.preschool-intro-text {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.preschool-intro-text p {
+  margin-bottom: 1.5rem;
+}
+
+.preschool-highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.highlight-card {
+  background-color: var(--light-bg);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-icon {
+  width: 70px;
+  height: 70px;
+  background-color: var(--primary-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+}
+
+.highlight-icon i {
+  font-size: 1.8rem;
+  color: var(--primary);
+}
+
+.highlight-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.highlight-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Teacher Ratio Section Styles */
+.teacher-ratio-section {
+  padding: 5rem 0;
+  background-color: var(--light-bg);
+}
+
+.teacher-ratio-container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.teacher-ratio-image {
+  flex: 0 0 40%;
+}
+
+.teacher-ratio-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-ratio-content {
+  flex: 1;
+}
+
+.teacher-ratio-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.ratio-benefits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.ratio-benefit {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ratio-benefit i {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.ratio-benefit p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* Development Areas Section Styles */
+.development-areas-section {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+.development-intro {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.development-areas-container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.development-image {
+  flex: 0 0 40%;
+}
+
+.development-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.development-areas-list {
+  flex: 1;
+}
+
+.development-area {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.area-icon {
+  flex: 0 0 50px;
+  height: 50px;
+  background-color: var(--primary-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.area-icon i {
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+.area-content {
+  flex: 1;
+}
+
+.area-content h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.area-content p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.development-note {
+  background-color: var(--light-bg);
+  border-left: 4px solid var(--primary);
+  padding: 1.5rem;
+  border-radius: 0 8px 8px 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.development-note p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.development-note i {
+  color: var(--primary);
+  margin-right: 0.5rem;
+}
+
+/* Daily Schedule Section Styles */
+.daily-schedule-section {
+  padding: 5rem 0;
+  background-color: var(--light-bg);
+}
+
+.schedule-container {
+  max-width: 900px;
+  margin: 3rem auto 0;
+}
+
+.schedule-timeline {
+  position: relative;
+  padding-left: 50px;
+}
+
+.schedule-timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: var(--primary);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  z-index: 1;
+}
+
+.timeline-time {
+  display: inline-block;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.timeline-content {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-content h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.timeline-content p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.schedule-note {
+  background-color: var(--white);
+  border-left: 4px solid var(--primary);
+  padding: 1.5rem;
+  border-radius: 0 8px 8px 0;
+  margin-top: 2rem;
+}
+
+.schedule-note p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.schedule-note i {
+  color: var(--primary);
+  margin-right: 0.5rem;
+}
+
+/* Learning Approach Section Styles */
+.learning-approach-section {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+.learning-approach-container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.learning-approach-content {
+  flex: 1;
+}
+
+.learning-approach-content p {
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.approach-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.approach-feature {
+  display: flex;
+  gap: 1.5rem;
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.approach-feature:hover {
+  transform: translateX(5px);
+  background-color: var(--primary-light);
+}
+
+.feature-icon {
+  flex: 0 0 50px;
+  height: 50px;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon i {
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-content h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.feature-content p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+.learning-approach-image {
+  flex: 0 0 40%;
+}
+
+.learning-approach-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Transition to Primary Section Styles */
+.transition-section {
+  padding: 5rem 0;
+  background-color: var(--light-bg);
+}
+
+.transition-container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.transition-image {
+  flex: 0 0 40%;
+}
+
+.transition-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.transition-content {
+  flex: 1;
+}
+
+.transition-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.transition-content h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.readiness-skills {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.skill-column {
+  flex: 1;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.skill-item i {
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.skill-item p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.transition-activities {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.transition-activities h3 {
+  margin-bottom: 1rem;
+}
+
+.transition-activities ul {
+  padding-left: 1.5rem;
+}
+
+.transition-activities li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.transition-note {
+  background-color: var(--primary-light);
+  border-left: 4px solid var(--primary);
+  padding: 1.5rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.transition-note p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+  color: white;
+}
+
+.transition-note i {
+  color: var(--primary);
+  margin-right: 0.5rem;
+}
+
+/* Enrollment CTA Section Styles */
+.enrollment-cta-section {
+  padding: 5rem 0;
+  background-color: var(--primary);
+  color: var(--white);
+  text-align: center;
+}
+
+.enrollment-cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.enrollment-cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+.enrollment-cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.cta-button {
+  background-color: var(--white);
+  color: var(--primary);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-block;
+  border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--white);
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* Responsive Styles for PreSchool Page */
+@media screen and (max-width: 1200px) {
+  .preschool-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .teacher-ratio-container,
+  .development-areas-container,
+  .learning-approach-container,
+  .transition-container {
+    flex-direction: column;
+  }
+  
+  .teacher-ratio-image,
+  .development-image,
+  .learning-approach-image,
+  .transition-image {
+    flex: 0 0 100%;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+  
+  .ratio-benefits {
+    grid-template-columns: 1fr;
+  }
+  
+  .readiness-skills {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .preschool-highlights {
+    grid-template-columns: 1fr;
+  }
+  
+  .development-area {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .area-icon {
+    margin: 0 auto;
+  }
+  
+  .approach-feature {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .feature-icon {
+    margin: 0 auto;
+  }
+  
+  .enrollment-cta-content h2 {
+    font-size: 2rem;
+  }
+  
+  .enrollment-cta-content p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .timeline-item::before {
+    left: -40px;
+  }
+  
+  .schedule-timeline {
+    padding-left: 40px;
+  }
+  
+  .schedule-timeline::before {
+    left: 10px;
+  }
+  
+  .timeline-time {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .timeline-content {
+    padding: 1.2rem;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1rem;
+  }
+  
+  .enrollment-cta-content h2 {
+    font-size: 1.8rem;
+  }
+}
+
 
 
 

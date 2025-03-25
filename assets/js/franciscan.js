@@ -426,3 +426,172 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize FAQs
   initFAQs();
 });
+
+// Add this to the existing JavaScript file
+
+// Initialize the testimonials slider for the PreSchool page
+function initTestimonialsSlider() {
+  const testimonialCards = document.querySelectorAll('.testimonial-card');
+  const dots = document.querySelectorAll('.testimonial-dots .dot');
+  const prevBtn = document.querySelector('.testimonial-arrow.prev');
+  const nextBtn = document.querySelector('.testimonial-arrow.next');
+  
+  if (testimonialCards.length === 0) return;
+  
+  let currentIndex = 0;
+  
+  // Function to show a specific testimonial
+  function showTestimonial(index) {
+    // Hide all testimonials
+    testimonialCards.forEach(card => {
+      card.classList.remove('active');
+    });
+    
+    // Remove active class from all dots
+    dots.forEach(dot => {
+      dot.classList.remove('active');
+    });
+    
+    // Show the selected testimonial and activate corresponding dot
+    testimonialCards[index].classList.add('active');
+    dots[index].classList.add('active');
+    
+    currentIndex = index;
+  }
+  
+  // Event listeners for dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showTestimonial(index);
+    });
+  });
+  
+  // Event listeners for arrows
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => {
+      let newIndex = currentIndex - 1;
+      if (newIndex < 0) newIndex = testimonialCards.length - 1;
+      showTestimonial(newIndex);
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      let newIndex = currentIndex + 1;
+      if (newIndex >= testimonialCards.length) newIndex = 0;
+      showTestimonial(newIndex);
+    });
+  }
+  
+  // Auto-rotate testimonials every 5 seconds
+  setInterval(() => {
+    let newIndex = currentIndex + 1;
+    if (newIndex >= testimonialCards.length) newIndex = 0;
+    showTestimonial(newIndex);
+  }, 5000);
+}
+
+// Document ready function
+document.addEventListener('DOMContentLoaded', function() {
+  // Update current date in the navbar
+  updateCurrentDate();
+  
+  // Initialize mobile menu
+  initMobileMenu();
+  
+  // Initialize testimonials slider
+  initTestimonialsSlider();
+  
+  // Initialize scroll to top button
+  initScrollToTop();
+  
+  // Add smooth scrolling to all links
+  initSmoothScroll();
+});
+
+// Function to update current date in the navbar
+function updateCurrentDate() {
+  const dateDisplay = document.getElementById('currentDate');
+  if (!dateDisplay) return;
+  
+  const now = new Date();
+  const day = now.getDate();
+  const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const month = monthNames[now.getMonth()];
+  const year = now.getFullYear();
+  
+  const dayElement = dateDisplay.querySelector('.day');
+  const monthElement = dateDisplay.querySelector('.month');
+  const yearElement = dateDisplay.querySelector('.year');
+  
+  if (dayElement) dayElement.textContent = day;
+  if (monthElement) monthElement.textContent = month;
+  if (yearElement) yearElement.textContent = year;
+}
+
+// Function to initialize mobile menu
+function initMobileMenu() {
+  const hamburger = document.querySelector('.hamburger');
+  const navItems = document.querySelector('.nav-items');
+  
+  if (!hamburger || !navItems) return;
+  
+  hamburger.addEventListener('click', function() {
+    this.classList.toggle('active');
+    navItems.classList.toggle('active');
+  });
+  
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', function(event) {
+    if (!hamburger.contains(event.target) && !navItems.contains(event.target) && navItems.classList.contains('active')) {
+      hamburger.classList.remove('active');
+      navItems.classList.remove('active');
+    }
+  });
+}
+
+// Function to initialize scroll to top button
+function initScrollToTop() {
+  const scrollToTopBtn = document.getElementById('scrollToTop');
+  
+  if (!scrollToTopBtn) return;
+  
+  // Show/hide button based on scroll position
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
+  });
+  
+  // Scroll to top when button is clicked
+  scrollToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+// Function to initialize smooth scrolling
+function initSmoothScroll() {
+  const links = document.querySelectorAll('a[href^="#"]');
+  
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      
+      if (href === '#') return;
+      
+      const targetElement = document.querySelector(href);
+      
+      if (targetElement) {
+        e.preventDefault();
+        
+        window.scrollTo({
+          top: targetElement.offsetTop - 100,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+}
