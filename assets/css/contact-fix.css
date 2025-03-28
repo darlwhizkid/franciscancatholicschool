@@ -1,0 +1,110 @@
+/* Fix for horizontal scrolling on contact.html */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Mobile responsive fixes */
+  @media screen and (max-width: 768px) {
+    /* Container adjustments */
+    .container {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+      box-sizing: border-box;
+    }
+    
+    /* Contact info grid */
+    .contact-info-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    /* Contact form and map */
+    .contact-form-map {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .contact-form-container,
+    .map-container {
+      width: 100%;
+    }
+    
+    /* Make map responsive */
+    .map-container iframe {
+      width: 100%;
+      height: 300px;
+    }
+    
+    /* Form layout */
+    .form-row {
+      flex-direction: column;
+    }
+    
+    .form-row .form-group {
+      width: 100%;
+    }
+    
+    /* Admission section */
+    .admission-container {
+      flex-direction: column;
+    }
+    
+    .admission-content,
+    .admission-image {
+      width: 100%;
+    }
+    
+    /* Appointment section */
+    .appointment-container {
+      flex-direction: column;
+    }
+    
+    .appointment-form-container,
+    .appointment-info {
+      width: 100%;
+    }
+    
+    /* Social media section */
+    .social-media-container {
+      flex-direction: column;
+    }
+    
+    .social-media-content,
+    .newsletter-container {
+      width: 100%;
+    }
+    
+    /* Footer adjustments */
+    .footer-content {
+      flex-direction: column;
+    }
+    
+    .footer-section {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    /* Fix for any potential overflow elements */
+    img, iframe, table, form {
+      max-width: 100%;
+    }
+    
+    /* Fix for any potential text overflow */
+    p, h1, h2, h3, h4, h5, h6, span, a {
+      word-wrap: break-word;
+    }
+  }
+  
+  /* Extra small screens */
+  @media screen and (max-width: 480px) {
+    /* Further reduce padding */
+    .container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  
